@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("UnFound")]
 [assembly: AssemblyProduct("DropDownButton")]
-[assembly: AssemblyCopyright("Copyright ©  2013 UnFound")]
+[assembly: AssemblyCopyright("Copyright ©  2013 Alexander Ellingsen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
