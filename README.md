@@ -12,8 +12,8 @@ If not it will always display the Text, and only the right button will be click-
 
 ## Images
 
-# ![logo](http://i.imgur.com/uQxVxxF.png) With Visual Styles
+![logo](http://i.imgur.com/uQxVxxF.png) With Visual Styles
 
-# ![logo](http://i.imgur.com/ICPP7qZ.png) Without Visual Styles
+![logo](http://i.imgur.com/ICPP7qZ.png) Without Visual Styles
 
-# ![logo](http://i.imgur.com/X71ClCn.png) Windows XP
+![logo](http://i.imgur.com/X71ClCn.png) Windows XP
