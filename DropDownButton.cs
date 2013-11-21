@@ -167,7 +167,7 @@ namespace UnFound.Controls
                 this.Click(this, EventArgs.Empty);
 
             if (p_DropDownMenu == null ||
-                p_DropDownMenu.Items.Count < 1 ||
+                p_DropDownMenu.Items.Count == 0 ||
                 this.Text != "")
             {
                 return;
@@ -427,7 +427,11 @@ namespace UnFound.Controls
             }
         }
 
-        private void ShowContextMenuStrip(bool selectFirstItem = false)
+        /// <summary>
+        /// Shows the DropDownButton at the button.
+        /// </summary>
+        /// <param name="selectFirstItem">Selects the first item so arrow keys can be used.</param>
+        public void ShowContextMenuStrip(bool selectFirstItem = false)
         {
             if (p_DropDownMenu == null)
                 return;
@@ -442,7 +446,9 @@ namespace UnFound.Controls
 
         private bool IsWinXP()
         {
-            return Environment.OSVersion.Platform == PlatformID.Win32NT && Environment.OSVersion.Version.Major == 5 && Environment.OSVersion.Version.Minor == 1;
+            return Environment.OSVersion.Platform == PlatformID.Win32NT &&
+                Environment.OSVersion.Version.Major == 5 &&
+                Environment.OSVersion.Version.Minor == 1;
         }
     }
 
