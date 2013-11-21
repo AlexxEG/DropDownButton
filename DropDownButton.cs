@@ -84,6 +84,9 @@ namespace UnFound.Controls
         private int p_DropDownSelectedItem;
         private Renderers p_Renderer = Renderers.Default;
 
+        /// <summary>
+        /// Gets or sets the DropDownMenu to display.
+        /// </summary>
         [DefaultValue(null)]
         public DropDownMenu DropDownMenu
         {
@@ -116,6 +119,9 @@ namespace UnFound.Controls
             }
         }
 
+        /// <summary>
+        /// Gets or sets the DropDownMenu selected item. (Last clicked item)
+        /// </summary>
         [DefaultValue(0)]
         public int DropDownSelectedItem
         {
@@ -127,6 +133,9 @@ namespace UnFound.Controls
             }
         }
 
+        /// <summary>
+        /// Gets or sets the DropDownMenu renderer.
+        /// </summary>
         [DefaultValue(Renderers.Default)]
         public Renderers Renderer
         {
