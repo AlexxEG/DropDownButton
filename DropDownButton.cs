@@ -11,10 +11,6 @@ namespace UnFound.Controls
     public class DropDownButton : Control
     {
         public enum Renderers { Default, Native }
-        private Rectangle dropDownRect;
-        private int pushedState = 0;
-        private PushButtonState buttonState = PushButtonState.Normal;
-        private ComboBoxState dropDownState = ComboBoxState.Normal;
 
         public delegate void DropDownItemHandler(object sender, DropDownItemEventArgs e);
         /// <summary>
@@ -72,11 +68,20 @@ namespace UnFound.Controls
 
         #endregion
 
-        #region Properties
+        #region Fields
 
         private DropDownMenu p_DropDownMenu;
         private int p_DropDownSelectedItem;
         private Renderers p_Renderer = Renderers.Default;
+
+        private Rectangle dropDownRect;
+        private int pushedState = 0;
+        private PushButtonState buttonState = PushButtonState.Normal;
+        private ComboBoxState dropDownState = ComboBoxState.Normal;
+
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// Gets or sets the DropDownMenu to display.
