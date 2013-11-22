@@ -38,12 +38,6 @@ namespace UnFound.Controls
             this.TextChanged += DropDownButton_TextChanged;
         }
 
-        public DropDownButton(DropDownMenu dropDownMenu)
-            : base()
-        {
-            this.DropDownMenu = dropDownMenu;
-        }
-
         #region Events
 
         private void DropDownMenu_ItemAdded(object sender, ToolStripItemEventArgs e)
@@ -184,7 +178,7 @@ namespace UnFound.Controls
             p_DropDownMenu.Items[p_DropDownSelectedItem].PerformClick();
         }
 
-        protected virtual void OnDropDownClicked(EventArgs e, bool selectFirstItem = false)
+        protected virtual void OnDropDownClicked(EventArgs e)
         {
             if (DropDownClicked != null)
                 DropDownClicked(this, e);
@@ -433,6 +427,7 @@ namespace UnFound.Controls
                 return;
 
             int width = p_DropDownMenu.Width;
+
             p_DropDownMenu.DropDownButton = this;
             p_DropDownMenu.Show(this, this.DisplayRectangle.Width - width, this.DisplayRectangle.Y + this.Height - 1);
 
