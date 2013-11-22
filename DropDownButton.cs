@@ -161,8 +161,12 @@ namespace UnFound.Controls
                 return base.IsInputKey(keyData);
         }
 
-        protected virtual void OnClick()
+        protected override void OnClick(EventArgs e)
         {
+            // The actual drop down button has it's own event.
+            if (dropDownState == ComboBoxState.Pressed)
+                return;
+
             if (this.Click != null)
                 this.Click(this, EventArgs.Empty);
 
@@ -178,11 +182,6 @@ namespace UnFound.Controls
 
             p_DropDownMenu.DropDownButton = this;
             p_DropDownMenu.Items[p_DropDownSelectedItem].PerformClick();
-        }
-
-        protected override void OnClick(EventArgs e)
-        {
-            // Do not trigger because it will fire even when pressing arrow.
         }
 
         protected virtual void OnDropDownClicked(EventArgs e, bool selectFirstItem = false)
@@ -210,7 +209,7 @@ namespace UnFound.Controls
             else if (e.KeyCode == Keys.Enter)
             {
                 if (this.Text == "")
-                    OnClick();
+                    OnClick(EventArgs.Empty);
                 else
                     ShowContextMenuStrip(true);
             }
@@ -293,9 +292,6 @@ namespace UnFound.Controls
             }
             else if (this.DisplayRectangle.Contains(e.Location))
             {
-                if (pushedState == 2)
-                    OnClick();
-
                 buttonState = PushButtonState.Hot;
                 dropDownState = ComboBoxState.Normal;
             }
