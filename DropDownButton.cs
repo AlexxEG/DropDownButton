@@ -310,7 +310,11 @@ namespace UnFound.Controls
             string text = string.Empty;
             Rectangle rect = this.DisplayRectangle;
             Rectangle rectText = this.DisplayRectangle;
-            StringFormat stringFormat = new StringFormat(); stringFormat.Alignment = StringAlignment.Center; stringFormat.LineAlignment = StringAlignment.Center;
+            StringFormat stringFormat = new StringFormat()
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
 
             dropDownRect = new Rectangle(this.DisplayRectangle.Width - 20, this.DisplayRectangle.Y + 1, 20, this.DisplayRectangle.Height - 2);
             rectText.Width -= 20;
