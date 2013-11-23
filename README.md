@@ -17,3 +17,7 @@ Also a DropDownMenu can be shared, and the button can be identified by the 'send
 ![logo](http://i.imgur.com/ICPP7qZ.png) Without Visual Styles
 
 ![logo](http://i.imgur.com/X71ClCn.png) Windows XP
+
+## Download
+
+Compiled DLLs can be downloaded from https://github.com/AlexxEG/DropDownButton/releases
