@@ -12,11 +12,11 @@ Also a DropDownMenu can be shared, and the button can be identified by the 'send
 
 ## Images
 
-![logo](https://github.com/AlexxEG/DropDownButton/blob/master/images/Windows%208.png) Windows 8
+![logo](images/Windows 8.png) Windows 8
 
-![logo](https://github.com/AlexxEG/DropDownButton/blob/master/images/Without%20Visual%20Styles.png) Without Visual Styles
+![logo](images/Without Visual Styles.png) Without Visual Styles
 
-![logo](https://github.com/AlexxEG/DropDownButton/blob/master/images/Windows%20XP.png) Windows XP
+![logo](images/Windows XP.png) Windows XP
 
 ## Download
 
