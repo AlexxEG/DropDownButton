@@ -12,11 +12,11 @@ Also a DropDownMenu can be shared, and the button can be identified by the 'send
 
 ## Images
 
-![logo](Images/Windows 8.png) Windows 8
+![logo](images/Windows 8.png) Windows 8
 
-![logo](Images/Windows XP.png) Windows XP
+![logo](images/Windows XP.png) Windows XP
 
-![logo](Images/Without Visual Styles.png) Without Visual Styles
+![logo](images/Without Visual Styles.png) Without Visual Styles
 
 ## Download
 
