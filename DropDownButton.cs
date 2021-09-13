@@ -163,8 +163,7 @@ namespace UnFound.Controls
             if (dropDownState == ComboBoxState.Pressed)
                 return;
 
-            if (this.Click != null)
-                this.Click(this, EventArgs.Empty);
+            this.Click?.Invoke(this, EventArgs.Empty);
 
             if (p_DropDownMenu == null ||
                 p_DropDownMenu.Items.Count == 0 ||
