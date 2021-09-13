@@ -154,10 +154,7 @@ namespace UnFound.Controls
 
         protected override bool IsInputKey(Keys keyData)
         {
-            if (keyData.Equals(Keys.Down))
-                return true;
-            else
-                return base.IsInputKey(keyData);
+            return keyData.Equals(Keys.Down) || base.IsInputKey(keyData);
         }
 
         protected override void OnClick(EventArgs e)
@@ -185,14 +182,12 @@ namespace UnFound.Controls
 
         protected virtual void OnDropDownClicked(EventArgs e)
         {
-            if (DropDownClicked != null)
-                DropDownClicked(this, e);
+            DropDownClicked?.Invoke(this, e);
         }
 
         protected virtual void OnDropDownItemClicked(DropDownItemEventArgs e)
         {
-            if (DropDownItemClicked != null)
-                DropDownItemClicked(this, e);
+            DropDownItemClicked?.Invoke(this, e);
         }
 
         protected override void OnGotFocus(EventArgs e)
@@ -307,7 +302,6 @@ namespace UnFound.Controls
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            string text = string.Empty;
             Rectangle rect = this.DisplayRectangle;
             Rectangle rectText = this.DisplayRectangle;
             StringFormat stringFormat = new StringFormat()
@@ -319,6 +313,7 @@ namespace UnFound.Controls
             dropDownRect = new Rectangle(this.DisplayRectangle.Width - 20, this.DisplayRectangle.Y + 1, 20, this.DisplayRectangle.Height - 2);
             rectText.Width -= 20;
 
+            string text;
             if (this.Text != string.Empty)
             {
                 text = this.Text;
@@ -374,7 +369,11 @@ namespace UnFound.Controls
 
             if (IsWinXP())
             {
-                StringFormat sf = new StringFormat(); sf.Alignment = StringAlignment.Center; sf.LineAlignment = StringAlignment.Center;
+                var sf = new StringFormat()
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center
+                };
                 Rectangle rectNew = dropDownRect; rectNew.Y -= 1; rectNew.Height += 2;
                 PushButtonState ddState = (PushButtonState)(int)dropDownState;
 
